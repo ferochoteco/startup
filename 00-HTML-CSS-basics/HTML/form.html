@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Bootcamp UI Globant 2016">
+  <meta name="keywords" content="HTML,CSS,Basic,Web development">
+  <title>Sign up</title>
+</head>
+<body>
+  <form>
+    <p>
+      <label>First name</label>
+      <input type="text" pattern=".{3,}" name="firstName" title="3 characters minimum" required=""/>
+    </p>
+    <p>
+      <label>Last name</label>
+      <input type="text" pattern=".{3,}" name="lastName" title="3 characters minimum" required=""/>
+    </p>
+    <p>
+      <label>Email</label>
+      <input type="email" name="email" required=""/>
+    </p>
+    <p>
+      <label>Birthday</label>
+      <input type="date" name="birthday" required=""/>
+    </p>
+    <p>
+      <label>Favourite sport: </label>
+      <select required>
+       <option value="">None</option>
+       <option value="volley">Volley</option>
+       <option value="basketball">Basketball</option>
+       <option value="soccer">Soccer</option>
+       <option value="hockey">Hockey</option>
+       <option value="other">Other</option>
+      </select>
+    </p>
+    <p>
+      <textarea name="bio" placeholder="Write your bio here..." cols="25" rows="8"></textarea>
+    </p>
+    <p>
+      <button type="reset" name="reset">Clear form</button>
+      <button type="submit" name="submit">Send</button>
+    </p>
+  </form>
+</body>
+</html>

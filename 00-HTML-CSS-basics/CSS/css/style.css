@@ -1,0 +1,82 @@
+html{
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 99%
+}
+
+body {
+  height: 100%;
+  overflow:hidden;
+}
+
+header, footer, aside, nav {
+  background: white;
+}
+
+body > footer, body > header {
+  text-align: center;
+}
+
+.header {
+  font-size: 46px;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px 5px 10px 5px;
+}
+
+.footer {
+  font-size: 10px;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px 5px 10px 5px;
+}
+
+.content {
+  font-size: 14px;
+}
+
+.navigation {
+  font-size: 12px;
+  margin-left: 0.3%;
+}
+
+.sidebar {
+  font-size: 10px;
+}
+
+section, nav, aside {
+
+  vertical-align: top;
+  display: inline-block;
+  border: 1px solid black;
+  width: 33.1vw;
+  height: 30%;
+  min-height: 170px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+footer {
+  margin-bottom: 0;
+}
+
+/*Specificity - Exercise 4*/
+[class$="r"] {
+  background: magenta;
+}
+/*Specificity - Exercise 5*/
+[class*="a"]:not([class$="r"])  {
+  background: blue;
+}
+
+/*Specificity - Exercise 6*/
+html {
+   font-size: 26px !important;
+}
+
+/*Specificity - Exercise 7*/
+.inline-style[style] {
+  background: green !important;
+}
