@@ -1,6 +1,7 @@
 html{
   font-family: sans-serif;
   font-size: 14px;
+  font-weight: bold;
   height: 99%
 }
 
@@ -62,21 +63,19 @@ footer {
   margin-bottom: 0;
 }
 
+/*Specificity - Exercise 5*/
+[class*="a"] {
+  background: blue;
+}
+
 /*Specificity - Exercise 4*/
 [class$="r"] {
   background: magenta;
 }
-/*Specificity - Exercise 5*/
-[class*="a"]:not([class$="r"])  {
-  background: blue;
-}
 
-/*Specificity - Exercise 6*/
-html {
-   font-size: 26px !important;
-}
+/*Specificity - Exercise 6 - html {font-weight: bold} added */
 
 /*Specificity - Exercise 7*/
-.inline-style[style] {
+.inline-style {
   background: green !important;
 }
