@@ -1,0 +1,33 @@
+footer, header, section {
+  text-align: center;
+}
+
+#hidden {
+  display: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#chuck, #norris {
+  color: white;
+  font-weight: bold;
+  background-color: green;
+}
+
+#artistAlbums {
+  float: right;
+}
+
+.sideArticle {
+  max-width: 800px;
+  border: 2px solid green;
+  margin-top: 4px;
+  padding-top: 15px;
+}
+
+.serverError {
+  color: red;
+}
