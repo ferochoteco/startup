@@ -25,7 +25,7 @@ $(document).ready(function() {
       highlightChuckNorris();
       }
       else {
-        alert("Error");
+        $("#hidden").html('<p class="serverError">Server error</p>');
       }
     });
   });
@@ -37,11 +37,11 @@ $(document).ready(function() {
     var img = albumItems.images["2"].url;
 
     $("#artistAlbums").append(
-    '<article class="sideArticle">Nombre del album: ' + name +
-    ' <p>Fecha de lanzamiento: '+ releaseData +
-    ' </p><p>Tipo: ' + type +
-    ' <a href="'+linkToSpotify+'">Link to spotify</a>' +
-    ' <img src="'+ img + '" alt="Album image"></p></article>'
+    '<article class="sideArticle">Name: ' + name +
+    ' <p>Release date: '+ releaseData +
+    ' </p><p><img src="'+ img + '" alt="Album image"></p><p>Type: ' + type +
+    ' <a href="'+linkToSpotify+'">On spotify</a>' +
+    ' </p></article>'
     );
   };
 
@@ -61,13 +61,13 @@ $(document).ready(function() {
     });
   };
 
-  function getAlbums(){
+  function getAlbums(name){
     $.ajax({
     type: "GET",
     url: "https://api.spotify.com/v1/search",
     dataType: 'JSON', //data type expected of the server response
     contentType: 'application/json; charset=utf-8', //content type used when sending data to the server
-    data: {q: 'Rolling Stones', type: 'album'},
+    data: {q: name, type: 'album'},
     success: function(data) {
       $.each(data.albums.items, function(iterator, albumItems) { //For each album show: name, type, image, release_date, and a link to spotify for that album.
         getReleaseData(albumItems);
@@ -79,6 +79,10 @@ $(document).ready(function() {
     });
   };
 
-  getAlbums();
+  $("#searchArtist").click(function(){
+    $("#artistAlbums").html('');
+    var artistName = $('#artistName').val();
+    getAlbums(artistName);
+  });
 
 });

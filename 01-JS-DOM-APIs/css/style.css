@@ -1,3 +1,12 @@
+* {
+  border-radius: 5px;
+}
+
+body {
+  background-color: #070025;
+  color: white;
+}
+
 footer, header, section {
   text-align: center;
 }
@@ -14,7 +23,7 @@ footer, header, section {
 #chuck, #norris {
   color: white;
   font-weight: bold;
-  background-color: green;
+  background-color: #2e9cc9;
 }
 
 #artistAlbums {
@@ -23,9 +32,26 @@ footer, header, section {
 
 .sideArticle {
   max-width: 800px;
-  border: 2px solid green;
+  background-color: #2e9cc9;
+  color: white;
+  border: 2px solid #0c003c;
+  border-radius: 15px;
   margin-top: 4px;
   padding-top: 15px;
+  font-weight: bold;
+}
+
+div:first-of-type {
+  text-align: center;
+  margin-top: 20px;
+}
+
+div:nth-last-of-type(1){
+  text-align: right;
+}
+
+#getRandomJoke {
+  text-align: center;
 }
 
 .serverError {
