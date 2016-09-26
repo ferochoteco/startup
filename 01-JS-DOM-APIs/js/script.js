@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
-  var showSection = $("#hidden").fadeIn(1500);
-
-  $.when(showSection).done(function() { //exercise 6
-    $(".alias").focus();
+  var showSection = $("#hidden").fadeIn(1500, function(){
+    $(".alias").focus(); //exercise 6
   });
 
   function highlightChuckNorris(){     //exercise 10
